@@ -1,7 +1,6 @@
 MetaNeighbor: a method to rapidly assess cell type identity using both functional and random gene sets
 ================
 Megan Crow, Anirban Paul, Sara Ballouz, Josh Huang, Jesse Gillis
-December 14, 2016
 
 -   [Introduction](#introduction)
 -   [Data types](#data-types)
@@ -297,3 +296,6 @@ top_hits
     ## 12   Vip_Chat    Vip_Gpc3     0.90 Reciprocal_top_hit
 
 These top hits can then be used for supervised analysis, making putative cell type labels for each unique grouping (see Part 1).
+
+For any assistance reproducing analyses please contact mcrow@cshl.edu or jgillis@cshl.edu
+######under construction
