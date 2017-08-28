@@ -178,11 +178,11 @@ install.packages("gplots",repos='http://cran.us.r-project.org')
 install.packages("RColorBrewer",repos='http://cran.us.r-project.org')
 library(gplots)
 library(RColorBrewer)
-source("2016-11-04-runMN-US.R")
+source("2017-08-28-runMN-US.R")
 load("MetaNeighbor_US_data.Rdata")
 var.genes=get_variable_genes(data, pheno)
 celltype.NV=run_MetaNeighbor_US(var.genes, data, celltypes, pheno)
-get_top_hits(celltype.NV,filename="filename.txt")
+get_top_hits(celltype.NV, pheno, threshold=0.9, filename="filename.txt")
 ```
 
 More detail
@@ -226,7 +226,7 @@ source("2017-08-28-runMN-US.R")
 load("MetaNeighbor_US_data.Rdata")
 ```
 
-### Identify a high variance gene set
+### Identify a highly variable gene set
 
 To begin, we will use the function get\_variable\_genes, which picks the top quartile of variable genes across all but the top decile of expression bins for each dataset, then provides the intersect across datasets as the output.
 
