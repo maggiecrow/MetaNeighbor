@@ -2,7 +2,7 @@ MetaNeighbor: a method to rapidly assess cell type identity using both functiona
 ================
 Megan Crow, Anirban Paul, Sara Ballouz, Josh Huang, Jesse Gillis
 
-August 28, 2017
+March 1, 2018
 
 -   [Introduction](#introduction)
 -   [Data types](#data-types)
@@ -32,7 +32,11 @@ The purpose of this method is to measure the similarity of cells across single c
 
 ![](coexp-schem.png)
 
-In our approach, this is formalized through neighbor voting based on cell-cell similarities, which will be described in detail in the Methods section. In short, MetaNeighbor takes four inputs: a gene-by-sample expression matrix (“data”), a set of labels indicating each sample’s dataset of origin (“experiment labels”), a set of labels indicating each sample’s cell type (“cell type labels”) and a set of genes (“gene sets”). The output is a performance vector (“AUROC scores”), which is the mean area under the receiver operator characteristic curve (AUROC) for the given task. This score reflects our ability to rank cells of the same known type higher than those of other types within a dataset, and can be interpreted as the probability that we will be correct about making a binary classification for a given cell (e.g. neuron vs. non-neuronal cell). An AUROC score of 0.5 means that we have performed as well as if we had randomly guessed the cell’s identity.
+In our approach, this is formalized through neighbor voting based on cell-cell similarities, described in more detail in our paper: 
+
+Crow M, Paul A, Ballouz S, Huang ZJ and Gillis J (2018) Characterizing the replicability of cell types defined by single cell RNA-sequencing data using MetaNeighbor, Nature Communications (9) 884 
+
+In short, MetaNeighbor takes four inputs: a gene-by-sample expression matrix (“data”), a set of labels indicating each sample’s dataset of origin (“experiment labels”), a set of labels indicating each sample’s cell type (“cell type labels”) and a set of genes (“gene sets”). The output is a performance vector (“AUROC scores”), which is the mean area under the receiver operator characteristic curve (AUROC) for the given task. This score reflects our ability to rank cells of the same known type higher than those of other types within a dataset, and can be interpreted as the probability that we will be correct about making a binary classification for a given cell (e.g. neuron vs. non-neuronal cell). An AUROC score of 0.5 means that we have performed as well as if we had randomly guessed the cell’s identity.
 
 This is a fully supervised analysis, and requires knowledge of the corresponding cell types across datasets. However, we have also used some heuristic measures to identify cell types across datasets when labels may be ambiguous or uninformative. We will walk through this unsupervised analysis in Part 2 of the vignette.
 
@@ -296,6 +300,6 @@ top_hits
 
 These top hits can then be used for supervised analysis, making putative cell type labels for each unique grouping (see Part 1).
 
-For any assistance reproducing analyses please contact mcrow@cshl.edu or jgillis@cshl.edu 
+For any assistance reproducing analyses please contact mcrow@cshl.edu or jgillis@cshl.edu. For updates please refer to gillislab.com/MetaNeighbor.
 
 ###### under construction
