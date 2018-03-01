@@ -300,6 +300,6 @@ top_hits
 
 These top hits can then be used for supervised analysis, making putative cell type labels for each unique grouping (see Part 1).
 
-For any assistance reproducing analyses please contact mcrow@cshl.edu or jgillis@cshl.edu. For updates please refer to gillislab.com/MetaNeighbor.
+For any assistance reproducing analyses please contact mcrow@cshl.edu or jgillis@cshl.edu. For updates please refer to http://www.github.com/gillislab/MetaNeighbor.
 
 ###### under construction
